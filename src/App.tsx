@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -52,6 +52,7 @@ function App() {
     }catch(error){      
       setInputClass('inputError')
       setResultado('ERROR');
+      
       setTimeout(() => {
         limpaResultado()
         setInputClass('input')
@@ -101,6 +102,7 @@ function App() {
             id={botao.id}
             className={botao.tipo}
             key={botao.id}
+            style={{gridArea:botao.id}}
             onClick={() => handleComandos(`${botao.label}`)}
           >
             {botao.label}
