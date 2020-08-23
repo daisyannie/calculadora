@@ -94,7 +94,7 @@ function App() {
 
   return (
     <div className="container">
-      <input type="text" className={inputClass} defaultValue={resultado} readOnly={true}/>
+      <input type="text" className={inputClass} defaultValue={resultado} readOnly={true} maxLength={12}/>
       <div className="buttonsContainer">
         {botoes.map(botao => 
           <button 
